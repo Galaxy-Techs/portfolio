@@ -466,7 +466,11 @@ footer a:hover{
 }
 
 /*=============================
+===============================
+===============================
  MEDIA QUERY 
+===============================
+===============================
 ==============================*/
 
 @media screen and (min-width: 768px) and (max-width: 880px) {
@@ -584,6 +588,7 @@ footer a:hover{
   main section div div .define{
     line-height: 30px;
   }
+  
   /* RECENT PROJECTS */
   main .recent{
     padding: 2rem 1rem;
@@ -612,5 +617,87 @@ footer a:hover{
   footer .backtotop{
     position: relative;
     top: 180px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 359px) {
+  /*HEADER*/
+  .container{
+    padding: 0px 1rem;
+  }
+  nav .search-container{
+    display: none;
+  }
+  header nav .topnav{
+    width: 180px;
+    position: relative;
+    top: 5px;
+  }
+  header nav div img{
+    width: 40px;
+    height: 30px;
+  }
+  header nav div h4{
+    font-size: 12px;
+    position: relative;
+    right: 15px;
+  }
+  header section .my-picture img{
+    display: none;
+  }
+  header section h1{
+    font-size: 35px;
+  }
+  /*MY SERVICES*/
+  main section .doings{
+    width: 300px;
+    height: auto;
+    padding: 10px 10px;
+  }
+  main section div div img{
+    width: 90px;
+    height: 90px;
+  }
+  main section div div .title{
+    padding-bottom: 10px;
+  }
+  main section div div .define{
+    line-height: 30px;
+  }
+
+  /* RECENT PROJECTS */
+  main .recent{
+    padding: 2rem 1rem;
+    padding-bottom: 50px;
+  }
+  .recent .slider-wrapper{
+    position: relative;
+    top: -30px;
+  }
+  #slide1, #slide2, #slide3, #slide4, #slide5, #slide6{
+    width: 324px;
+    height: auto;
+  }
+  /*TESTIMONIALS*/
+  main .testimonials{
+    padding: 1rem 1rem;
+  }
+  main .testimonials .up h2{
+    font-size: 30px
+  }
+  /* FOOTER */
+  footer{
+    padding: 2rem 1.5rem;
+  }
+  .about-link, .contact-links{
+    position: relative;
+    top:30px;
+  }
+  footer .backtotop{
+    position: relative;
+    top: 180px;
+  }
+  footer div .address{
+    position: relative;
+    top: 20px;
   }
 }
