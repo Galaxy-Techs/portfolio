@@ -1,0 +1,746 @@
+/*==========================
+header section .my-picture{
+background-color: var(--teal);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+--font-family: 'DM Sans', sans-serif;
+font-family: 'DM Serif Display', serif;
+font-family: 'Roboto', sans-serif;
+}*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --dark: #171c22;
+  --lightdark: #20272f;
+  --teal: #00bd95;
+  --teall: #13ca88;
+  --light: #feffff;
+}
+::selection{
+  background-color: var(--teall);
+  color: white;
+}
+.container{
+  padding: 0 5rem;
+}
+i{
+  color: var(--teal);
+  /*border-color: var(--teal);*/
+}
+button{
+  width: 50px;
+  height: 35px;
+  border-radius: 40px 40px 40px 40px;
+}
+body{
+  padding: 0px 0px;
+  color: var(--light);
+}
+/*================
+  HEADER SECTION
+================*/
+header{
+  height: 100vh;
+  margin: 0px 0px;
+  /*background-color: var(--lightdark);  */
+   --s: 50px; /* control the size */
+  --c1: var(--lightdark);
+  --c2: var(--dark);
+  
+  --_g: 
+  var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+  var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+  background:
+    radial-gradient(100% 100% at 100% 0,var(--c1) 2%,var(--_g),#0008 96%,#0000),
+    radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%)
+    var(--c1);
+  background-size: var(--s) var(--s);
+}
+header nav{
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav div img{
+  width: 40px;
+  height: 30px;
+}
+header nav div h4{
+  display: inline;
+  color: var(--light);
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  top: -10px;
+  animation: blinker 1.5s linear infinite;
+  color: var(--teal);
+}
+@keyframes blinker{
+  50%{
+    opacity: 0;
+  }
+}
+header nav .topnav{
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+}
+header nav div a{
+  text-decoration: none;
+  color: var(--light);
+  font-family: 'Roboto', sans-serif;
+}
+header nav div a:hover{
+  font-weight: bold;
+  color: var(--teal);
+}
+.active{
+  color: var(--teal) !important;
+}
+/*hover*/
+.active:hover{
+  font-weight: bold;
+  color: var(--teal);
+  text-shadow: 0px 0px 1px var(--teal);
+}
+/*search area*/
+nav .search-container form{
+  background-color: var(--teal);
+  height:35px;
+  border-radius: 5px;
+}
+nav .search-container button{
+  color: var(--light);
+  background-color: var(--teal);
+  border: 1px solid var(--teal);
+  position: relative;
+  right: 10px;
+}
+nav .search-container button:hover{
+  background-color: #c5eade;
+  color: var(--teal);
+  font-weight: bolder;
+}
+nav input{
+  height: 30px;
+  border: 2px solid var(--teal);
+  border-radius: 5px;
+  background-color: var(--lightdark);
+  color: var(--light);
+}
+/*header section*/
+header section{
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: 'DM Sans', sans-serif; 
+}
+.about{
+  max-width: 450px;
+}
+section span{
+  color: var(--teal);
+}
+section div h1{
+  color: var(--teal);
+  font-size: 45px;
+  padding-top: 10px;
+}
+section div h3{
+  padding-top: 10px;
+}
+header section div p{
+  padding-top: 20px;
+  padding-bottom: 35px;
+  line-height: 25px;
+  text-align: justify;
+}
+header section div .letstalk{
+  padding-top: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: var(--teal);
+  padding:6px 18px; 
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px var(--teal);
+}
+header section div .letstalk:hover{
+  background-color: var(--lightdark);
+  color: var(--teal);
+  border: 1px solid var(--teal);
+}
+header section div a:active{
+  color: white;
+}
+header .check{
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.handles img{
+  width: 40px;
+  position: relative;
+  top: 15px;
+}
+.handles img:hover{
+  box-shadow: 0px 2px 10px var(--teal);
+  border-radius: 50px;
+}
+header section .my-picture img{
+  max-width: 350px;
+  position: relative;
+  top: -50px;
+  right: 100px;
+}
+/*==================
+  WHAT I DO SECTION
+====================*/
+main section .what-i-do{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+main .container{
+  background-color: var(--dark);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+main .container div h2{
+  padding-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+}
+main .container div{
+  font-family: 'Roboto', sans-serif;
+}
+main section div .doings{
+  padding: 30px 20px;
+  font-family: 'roboto', sans-serif;
+  background-color: var(--lightdark);
+  border-radius: 10px;
+  width: 350px;
+  height: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main section div .doings:hover{
+  border: 1px solid var(--light);
+  box-shadow: 0px 0px 20px var(--teal);
+  color: var(--teal);
+}
+main section div div img{
+  width: 100px;
+  height: 100px;
+}
+main section div div .title{
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+main section div div .define{
+  line-height: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+/*====================
+RECENT PROJECT SECTION
+======================*/
+main .recent{
+  /*background-color: var(--lightdark);*/
+  --s: 50px; /* control the size */
+  --c1: var(--lightdark);
+  --c2: var(--dark);
+  
+  --_g: 
+  var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+  var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+  background:
+    radial-gradient(100% 100% at 100% 0,var(--c1) 2%,var(--_g),#0008 96%,#0000),
+    radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%)
+    var(--c1);
+  background-size: var(--s) var(--s);
+  padding: 5rem 5rem;
+  text-align: center;
+}
+main .recent div{
+  text-align: center;
+}
+main .recent div h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  padding-bottom: 1rem;
+}
+main .recent div p{
+  font-family: 'Roboto', sans-serif;
+  line-height: 20px;
+  padding-bottom: 50px;
+  margin: 0px auto;
+}
+/*----- SLIDES -----*/
+/* container */
+.contain{
+  padding: 0px auto;
+  /*padding: 2rem;*/
+}
+.slider-wrapper{
+  position: relative;
+  max-width: 53rem;
+  height: auto;
+  margin: 0 auto;
+}
+.slider{
+  display: flex;
+  /*aspect-ratio: 16 / 9;*/
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0px 0px 50px var(--teal);
+  border-radius: 18px;
+  color: var(--teal);
+  overflow-x: hidden;
+}
+/*================
+===================
+  SLIDE ANIMATION
+  ================
+  ====================*/
+#slide1, #slide2, #slide3, #slide4, #slide5, #slide6, #slide7, #slide8, #slide9, #slide10, #slide11, #slide12, #slide13{
+  animation: slidey 40s infinite;
+}
+@keyframes slidey{
+  0%{ transform: translateX(0%); }
+  8.33%{ transform: translateX(-100%); }
+  16.67%{ transform: translateX(-200%); }
+  25%{ transform: translateX(-300%); }
+  33.33%{ transform: translateX(-400%); }
+  41.67%{ transform: translateX(-500%); }
+  50%{ transform: translateX(-600%); }
+  58.33%{ transform: translateX(-700%); }
+  66.67%{ transform: translateX(-800%); }
+  75%{ transform: translateX(-900%); }
+  83.33%{ transform: translateX(-1000%); }
+  91.67%{ transform: translateX(-1100%); }
+  100%{ transform: translateX(-1200%); }
+}
+.slider img{
+  max-width: 900px;
+  /*width: 100%*/
+  height: 433px;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+}
+
+
+/*============
+  TESTIMONIES
+==============*/
+main .testimonials{
+  background-color: var(--dark);
+  padding: 1.5rem 3rem;
+}
+main .testimonials .up{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+main .testimonials h3{
+  color: var(--teal);
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+main .testimonials .up h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px
+}
+/* comments */
+main .testimonials .comments{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0px auto;
+}
+.comment1, .comment2, .comment3{
+  padding: 20px 15px;
+  width: 300px;
+  background-color: var(--lightdark);
+  border-radius: 10px;
+  margin: 10px;
+}
+main .quote{
+  display: flex;
+  justify-content: space-between;
+}
+main .testimonials .comments p{
+  padding-top: 20px;
+  /*font-weight: bold;*/
+  font-family: roboto;
+  text-align: justify;
+  line-height: 25px;
+}
+button a{
+  text-decoration: none;
+}
+.recent button{
+  background-color: var(--teal);
+  color: white;
+  border: 1px solid var(--teal)
+}
+.comments .namepic{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.comments img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.namepic span{
+  color: var(--teal);
+  font-weight: bolder;
+}
+.namepic p{
+  position: relative;
+  top: -30px;
+}
+/*=================
+START FOOTER SECTION
+====================*/
+footer{
+  padding: 50px 80px;
+  font-weight: bold;
+  /*background-color: var(--lightdark);*/
+  font-family: 'Montserrat', sans-serif;
+  /*background-color: var(--dark);*/
+  --s: 50px; /* control the size */
+  --c1: var(--lightdark);
+  --c2: var(--dark);
+  
+  --_g: 
+  var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+  var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+  background:
+    radial-gradient(100% 100% at 100% 0,var(--c1) 2%,var(--_g),#0008 96%,#0000),
+    radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%)
+    var(--c1);
+  background-size: var(--s) var(--s);
+}
+footer .footerlinks{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+  font-weight: bold;
+  word-spacing: 20px;
+  color: var(--teal);
+  position: relative;
+  right: 10px;
+  padding-left: 10px;
+  border-left: 3px solid var(--teal);
+  /*text-shadow: 0px 0px 0px var(--light);*/
+  /*text-shadow: 0px 0px 3px var(--teal);*/
+}
+.backtotop{
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: var(--lightdark);
+  box-shadow: 0px 0px 5px var(--teal);
+  padding: 0px 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  cursor: copy;
+}
+.backtotop:hover{
+  background-color: var(--teal);
+}
+.backtotop i:hover{
+  color: var(--dark);
+}
+.backtotop i:active{
+  color: var(--light);
+}
+.reserved{
+  padding-top: 50px;
+  /*padding-left: 220px;
+  padding-right: 340px;*/
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+/*=============================
+===============================
+===============================
+ MEDIA QUERY 
+===============================
+===============================
+==============================*/
+@media screen and (min-width: 960px) and (max-width: 1020px) {
+  header section .my-picture img{
+    /*width: 280px;*/
+    /*height: 330px;*/
+    position: relative;
+    /*left: 0px;*/
+    right: -20px;
+  }
+}
+
+@media screen and (min-width: 881px) and (max-width: 959px) {
+   header section .my-picture img{
+    width: 280px;
+    height: 330px;
+    position: relative;
+    left: 0px;
+    right: 10px;
+  }
+   nav .search-container{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 880px) {
+  /*HEADER*/
+  .container{
+    padding: 0px 1.5rem;
+  }
+  header section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  header nav .topnav{
+    width: 300px;
+  }
+  nav input{
+    max-width: 80px;
+  }
+  header section .my-picture img{
+    width: 280px;
+    height: 330px;
+    position: relative;
+    left: 0px;
+    right: 10px;
+  }
+   nav .search-container{
+    display: none;
+  }
+  /* SERVICES */
+  
+  /* TESTIMONIALS */
+  .testimonials{
+    padding: 0px 1rem;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 750px) {
+  /*HEADER*/
+  .container{
+    padding: 0px 1rem;
+  }
+  nav .search-container{
+    display: none;
+  }
+  header nav .topnav{
+    width: 200px;
+    position: relative;
+  }
+  header nav div h4{
+    position: relative;
+  }
+  header section .about{
+    position: relative;
+    left: 10px;
+  }
+  header section .my-picture img{
+    display: none;
+  }
+  /* MY SERVICE */
+  main section .doings{
+    position: relative;
+    /*right: -20px;*/
+  }
+  /* RECENT PROJECT */
+  #slide1, #slide2, #slide3, #slide4, #slide5, #slide6{
+    width: 254px;
+    height: auto;
+  }
+  /* FOOTER */
+  footer{
+    padding: 2rem 2.5rem;
+  }
+  .about-link, .contact-links{
+    position: relative;
+    top:30px;
+  }
+  footer .backtotop{
+    position: relative;
+    top: 180px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 410px) {
+  /*HEADER*/
+  .container{
+    padding: 0px 1rem;
+  }
+  nav .search-container{
+    display: none;
+  }
+  header nav .topnav{
+    width: 200px;
+    position: relative;
+    top: 5px;
+  }
+  header section .my-picture img{
+    display: none;
+  }
+  header section h1{
+    font-size: 35px;
+  }
+  /*MY SERVICES*/
+  main section .doings{
+    width: 300px;
+    height: auto;
+    padding: 10px 10px;
+  }
+  main section div div img{
+    width: 90px;
+    height: 90px;
+  }
+  main section div div .title{
+    padding-bottom: 10px;
+  }
+  main section div div .define{
+    line-height: 30px;
+  }
+  
+  /* RECENT PROJECTS */
+  main .recent{
+    padding: 2rem 1rem;
+    padding-bottom: 50px;
+  }
+  .recent .slider-wrapper{
+    position: relative;
+    top: -30px;
+  }
+  #slide1, #slide2, #slide3, #slide4, #slide5, #slide6{
+    width: 324px;
+    height: auto;
+  }
+  /*TESTIMONIALS*/
+  .comment1 .namepic p{
+    font-size: 14px;
+  }
+  /* FOOTER */
+  footer{
+    padding: 2rem 1.5rem;
+  }
+  .about-link, .contact-links{
+    position: relative;
+    top:30px;
+  }
+  footer .backtotop{
+    position: relative;
+    top: 180px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 359px) {
+  /*HEADER*/
+  .container{
+    padding: 0px 1rem;
+  }
+  nav .search-container{
+    display: none;
+  }
+  header nav .topnav{
+    width: 180px;
+    position: relative;
+    top: 5px;
+  }
+  header nav div img{
+    width: 40px;
+    height: 30px;
+  }
+  header nav div h4{
+    font-size: 12px;
+    position: relative;
+    right: 15px;
+  }
+  header section .my-picture img{
+    display: none;
+  }
+  header section h1{
+    font-size: 35px;
+  }
+  /*MY SERVICES*/
+  main section .doings{
+    width: 300px;
+    height: auto;
+    padding: 10px 10px;
+  }
+  main section div div img{
+    width: 90px;
+    height: 90px;
+  }
+  main section div div .title{
+    padding-bottom: 10px;
+  }
+  main section div div .define{
+    line-height: 30px;
+  }
+
+  /* RECENT PROJECTS */
+  main .recent{
+    padding: 2rem 1rem;
+    padding-bottom: 50px;
+  }
+  .recent .slider-wrapper{
+    position: relative;
+    top: -30px;
+  }
+  #slide1, #slide2, #slide3, #slide4, #slide5, #slide6{
+    width: 324px;
+    height: auto;
+  }
+  /*TESTIMONIALS*/
+  main .testimonials{
+    padding: 1rem 1rem;
+  }
+  main .testimonials .up h2{
+    font-size: 30px
+  }
+  /* FOOTER */
+  footer{
+    padding: 2rem 1.5rem;
+  }
+  .about-link, .contact-links{
+    position: relative;
+    top:30px;
+  }
+  footer .backtotop{
+    position: relative;
+    top: 180px;
+  }
+  footer div .address{
+    position: relative;
+    top: 20px;
+  }
+}
